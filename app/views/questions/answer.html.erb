@@ -1,0 +1,10 @@
+<p> You :<%= @answer = params[:question] %></p>
+<% if @answer == "I am going to work" %>
+  <%= "Coach: - Great" %>
+<% elsif @answer.include?("?")%>
+  <%= "Coach: -Silly question, get dressed and go to work!." %>
+<% else %>
+  <%= "Coach: -I don't care, get dressed and go to work!" %>
+<% end %>
+<p></p>
+<%= link_to "Ask a new question", ask_path %>
